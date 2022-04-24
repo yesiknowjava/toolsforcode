@@ -1,24 +1,16 @@
 <script>
 
     function set_result(result) {
-        document.getElementById("result_data").innerHTML = result[0]["encoded"]
+        document.getElementById("result_data").innerHTML = result
     }
-    function call_server() {
 
-        text_data = "Hare Krishna Hare Krishna Krishna Krishna Hare Hare. Hare Rama Hare Rama Rama Rama Hare Hare"
-        text_data = document.getElementById("raw_input").value
-
-        // Define the string
-        var decodedStringBtoA = text_data;
-
+    function encode(text_data) {
         // Encode the String
-        var encodedStringBtoA = btoa(decodedStringBtoA);
+        var encodedStringBtoA = btoa(text_data);
 
         if (encodedStringBtoA) {
-            console.log("Javascript based encode")
             set_result(encodedStringBtoA)
         } else {
-            console.log("backend based encode")
             var myHeaders = new Headers();
             var raw = JSON.stringify([{
             "source_string": text_data
@@ -33,10 +25,54 @@
 
             fetch("https://5f4dlh7trgjlw4nfqlplfib4xa0izcpv.lambda-url.us-east-2.on.aws/?mydata=krishna", requestOptions)
             .then(response => response.text())
-            .then(result => set_result(result))
+            .then(result => set_result(result[0]["encoded"]))
             .catch(error => console.log('error', error));
-        
         }
+    }
+
+    function Decodes(text_data) {
+        // Encode the String
+        var decodedString = atob(text_data);
+
+        if (decodedString) {
+            set_result(decodedString)
+        } else {
+            var myHeaders = new Headers();
+            var raw = JSON.stringify([{
+            "source_string": text_data
+            }]);
+
+            var requestOptions = {
+            method: 'POST',
+            headers: myHeaders,
+            body: raw,
+            redirect: 'follow'
+            };
+
+            fetch("https://5f4dlh7trgjlw4nfqlplfib4xa0izcpv.lambda-url.us-east-2.on.aws/?mydata=krishna", requestOptions)
+            .then(response => response.text())
+            .then(result => set_result(result[0]["encoded"]))
+            .catch(error => console.log('error', error));
+        }
+    }
+
+    function call_server(function_name) {
+
+        text_data = document.getElementById("raw_input").value
+        switch(function_name) {
+            case "encode":
+                // code block
+                encode(text_data)
+                break;
+            case "decode":
+                // code block
+                decode(text_data)
+                break;
+            default:
+                // code block
+        }
+
+        
         
     }
 </script>
