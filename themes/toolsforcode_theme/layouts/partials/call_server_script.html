@@ -1,7 +1,7 @@
 <script>
 
     function set_result(result) {
-        document.getElementById("result_data").innerHTML = result
+        document.getElementById("result_data").innerHTML = result[0]["encoded"]
     }
     function call_server() {
 
@@ -14,27 +14,29 @@
         // Encode the String
         var encodedStringBtoA = btoa(decodedStringBtoA);
 
-        console.log(encodedStringBtoA);
+        if (encodedStringBtoA) {
+            console.log("Javascript based encode")
+            set_result(result)
+        } else {
+            console.log("backend based encode")
+            var myHeaders = new Headers();
+            var raw = JSON.stringify([{
+            "source_string": text_data
+            }]);
 
-        var myHeaders = new Headers();
-        // myHeaders.append("Content-Type", "application/json");
+            var requestOptions = {
+            method: 'POST',
+            headers: myHeaders,
+            body: raw,
+            redirect: 'follow'
+            };
 
+            fetch("https://5f4dlh7trgjlw4nfqlplfib4xa0izcpv.lambda-url.us-east-2.on.aws/?mydata=krishna", requestOptions)
+            .then(response => response.text())
+            .then(result => set_result(result))
+            .catch(error => console.log('error', error));
         
-
-        var raw = JSON.stringify([{
-        "source_string": text_data
-        }]);
-
-        var requestOptions = {
-        method: 'POST',
-        headers: myHeaders,
-        body: raw,
-        redirect: 'follow'
-        };
-
-        fetch("https://5f4dlh7trgjlw4nfqlplfib4xa0izcpv.lambda-url.us-east-2.on.aws/?mydata=krishna", requestOptions)
-        .then(response => response.text())
-        .then(result => set_result(result))
-        .catch(error => console.log('error', error));
+        }
+        
     }
 </script>
