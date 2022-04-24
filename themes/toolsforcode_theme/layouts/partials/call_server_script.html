@@ -1,0 +1,29 @@
+<script>
+
+    function set_result(result) {
+        document.getElementById("result_data").innerHTML = result
+    }
+    function call_server() {
+        var myHeaders = new Headers();
+        // myHeaders.append("Content-Type", "application/json");
+
+        text_data = "Hare Krishna Hare Krishna Krishna Krishna Hare Hare. Hare Rama Hare Rama Rama Rama Hare Hare"
+        text_data = document.getElementById("raw_input").value
+
+        var raw = JSON.stringify([{
+        "source_string": text_data
+        }]);
+
+        var requestOptions = {
+        method: 'POST',
+        headers: myHeaders,
+        body: raw,
+        redirect: 'follow'
+        };
+
+        fetch("https://5f4dlh7trgjlw4nfqlplfib4xa0izcpv.lambda-url.us-east-2.on.aws/?mydata=krishna", requestOptions)
+        .then(response => response.text())
+        .then(result => set_result(result))
+        .catch(error => console.log('error', error));
+    }
+</script>
