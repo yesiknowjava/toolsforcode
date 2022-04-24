@@ -4,11 +4,22 @@
         document.getElementById("result_data").innerHTML = result
     }
     function call_server() {
-        var myHeaders = new Headers();
-        // myHeaders.append("Content-Type", "application/json");
 
         text_data = "Hare Krishna Hare Krishna Krishna Krishna Hare Hare. Hare Rama Hare Rama Rama Rama Hare Hare"
         text_data = document.getElementById("raw_input").value
+
+        // Define the string
+        var decodedStringBtoA = text_data;
+
+        // Encode the String
+        var encodedStringBtoA = btoa(decodedStringBtoA);
+
+        console.log(encodedStringBtoA);
+
+        var myHeaders = new Headers();
+        // myHeaders.append("Content-Type", "application/json");
+
+        
 
         var raw = JSON.stringify([{
         "source_string": text_data
