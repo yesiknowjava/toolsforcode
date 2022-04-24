@@ -1,0 +1,11 @@
+User-agent: BLEXBot
+
+Disallow: /
+
+User-Agent: *
+
+Allow: *.webp
+
+
+Sitemap: https://www.toolsforcode.com/sitemap.xml
+Sitemap: https://www.toolsforcode.com/htmlsitemap/
