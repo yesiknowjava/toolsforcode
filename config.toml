@@ -1,4 +1,5 @@
-baseURL = 'http://example.org/'
+baseURL = 'https://toolsforcode.pages.dev/'
 languageCode = 'en-us'
-title = 'My New Hugo Site'
+title = 'Toolsforcode'
 theme = "toolsforcode_theme"
+enableRobotsTXT: true
