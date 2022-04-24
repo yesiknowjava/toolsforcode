@@ -2,7 +2,7 @@ baseURL = 'https://toolsforcode.pages.dev/'
 languageCode = 'en-us'
 title = 'Toolsforcode'
 theme = "toolsforcode_theme"
-enableRobotsTXT: true
+enableRobotsTXT = true
 
 disableHugoGeneratorInject = true
 
