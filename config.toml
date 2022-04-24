@@ -3,3 +3,24 @@ languageCode = 'en-us'
 title = 'Toolsforcode'
 theme = "toolsforcode_theme"
 enableRobotsTXT: true
+
+disableHugoGeneratorInject = true
+
+refLinksNotFoundURL = "/404.html"
+
+[mediaTypes."application/rdf+xml"]
+suffixes = ["rdf"]
+
+[outputFormats.RDF]
+mediaType = "application/rdf+xml"
+
+[sitemap]
+  changefreq = 'weekly'
+  filename = 'sitemap.xml'
+  priority = 1
+
+[build]
+  writeStats = true
+
+[outputs]
+page = ["HTML"]
