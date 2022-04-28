@@ -1,7 +1,7 @@
 ---
 title: "Base64 Decode"
 draft: false
-type: "base64encode"
+type: "base64_layout"
 button_title: "Decode"
 function: "decode"
 textarea_label: "Enter encoded text below to decode to raw string"
