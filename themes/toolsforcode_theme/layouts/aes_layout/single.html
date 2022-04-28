@@ -3,6 +3,7 @@
 
 {{ partial "head.html" . }}
 {{ partial "js/encryption_js.html" . }}
+{{ partial "js/common_js.html" . }}
 
 <body>
     <div class="flex h-screen bg-gray-50 dark:bg-gray-900" :class="{ 'overflow-hidden': isSideMenuOpen}">
@@ -42,7 +43,7 @@
                                     id="encryption_key"
                                     class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input"
                                     placeholder=""
-                                    value="a">
+                                    value="000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f">
                             </label>
 
                             <label class="mt-4 block text-sm">
@@ -51,10 +52,10 @@
                                     id="encryption_iv"
                                     class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input"
                                     placeholder=""
-                                    value="a">
+                                    value="000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f">
                             </label>
 
-                            <div class="mt-4 text-sm">
+                            {{/*  <div class="mt-4 text-sm">
                                 <span class="text-gray-600 dark:text-gray-400 font-semibold">
                                   Key Size in Bits
                                 </span>
@@ -72,7 +73,7 @@
                                     <span class="ml-2">256</span>
                                   </label>
                                 </div>
-                              </div>
+                              </div>  */}}
 
                               <div class="mt-4 text-sm">
                                 <span class="text-gray-600 dark:text-gray-400 font-semibold">
@@ -90,12 +91,28 @@
                                 </div>
                               </div>
 
+                              <div class="mt-4 text-sm">
+                                <span class="text-gray-600 dark:text-gray-400 font-semibold">
+                                  Encoding Options
+                                </span>
+                                <div class="mt-2">
+                                  <label class="inline-flex items-center text-gray-600 dark:text-gray-400">
+                                    <input type="radio" checked class="text-purple-600 form-radio focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:focus:shadow-outline-gray" name="encoding" value="hex">
+                                    <span class="ml-2">Hex</span>
+                                  </label>
+                                  <label class="inline-flex items-center ml-6 text-gray-600 dark:text-gray-400">
+                                    <input type="radio" class="text-purple-600 form-radio focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:focus:shadow-outline-gray" name="encoding" value="utf8">
+                                    <span class="ml-2">Utf8</span>
+                                  </label>
+                                </div>
+                              </div>
+
                             
                               <label class="mt-4 block text-sm">
                                 <span class="text-gray-600 dark:text-gray-400 font-semibold">{{ .Params.textarea_label }}</span>
                                 <textarea id="raw_input"
                                 class="block w-full mt-1 text-sm dark:text-gray-300 dark:border-gray-600 dark:bg-gray-700 form-textarea focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:focus:shadow-outline-gray"
-                                rows="5" placeholder="Enter text">a</textarea>
+                                rows="5" placeholder="Enter text"></textarea>
                             </label>
 
                             
@@ -119,6 +136,17 @@
                             <p id="result_data">
 
                             </p>
+
+                            <div class="flex mt-6 text-sm">
+                                
+                                <label class="flex items-center dark:text-gray-400">
+                                    <button onclick="copy_text(); return false;"
+                                        class="flex items-center justify-between w-full px-4 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-purple-600 border border-transparent rounded-lg active:bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple">
+                                        Copy Text
+                                        <span class="ml-2" aria-hidden="true">+</span>
+                                    </button>
+                                </label>
+                            </div>
                         </div>
                     </div>
 

@@ -6,37 +6,45 @@
 <script>
     
 
-    function aesEncrypt(data, key, iv, bits, mode) {
+    function aesEncrypt(data, key, iv, encoding_option, mode) {
         if (mode == 'cbc') {
             mode = CryptoJS.mode.CBC
         } else {
             mode = CryptoJS.mode.ECB
         }
-        // key = CryptoJS.enc.Utf8.parse(key)
-        // iv = CryptoJS.enc.Utf8.parse(iv)
-        console.log(key)
+        if (encoding_option == 'hex') {
+            key = CryptoJS.enc.Hex.parse(key)
+            iv = CryptoJS.enc.Hex.parse(iv)
+        } else {
+            key = CryptoJS.enc.Utf8.parse(key)
+            iv = CryptoJS.enc.Utf8.parse(iv)
+        }
         const cipher = CryptoJS.AES.encrypt(data, key, {
             iv: iv, // parse the IV 
             padding: CryptoJS.pad.Pkcs7,
-            mode: mode,
+            mode: mode
             
         })
         return cipher.toString()
     }
 
-    function aesDecrypt(data, key, iv, bits, mode) {
+    function aesDecrypt(data, key, iv, encoding_option, mode) {
         if (mode == 'cbc') {
             mode = CryptoJS.mode.CBC
         } else {
             mode = CryptoJS.mode.ECB
         }
-        
-        // key = CryptoJS.enc.Utf8.parse(key)
-        // iv = CryptoJS.enc.Utf8.parse(iv)
+        if (encoding_option == 'hex') {
+            key = CryptoJS.enc.Hex.parse(key)
+            iv = CryptoJS.enc.Hex.parse(iv)
+        } else {
+            key = CryptoJS.enc.Utf8.parse(key)
+            iv = CryptoJS.enc.Utf8.parse(iv)
+        }
         const cipher = CryptoJS.AES.decrypt(data, key, {
             iv: iv, // parse the IV 
             padding: CryptoJS.pad.Pkcs7,
-            mode: mode,
+            mode: mode
             
         })
         return cipher.toString(CryptoJS.enc.Utf8)
@@ -46,28 +54,26 @@
         document.getElementById("result_data").innerHTML = result
     }
 
-    function encrypt(text_data, key, iv, bits, mode) {
+    function encrypt(text_data, key, iv, encoding_option, mode) {
         // Encode the String
-        var encodedStringBtoA = aesEncrypt(text_data, key, iv, bits, mode);
+        var encodedStringBtoA = aesEncrypt(text_data, key, iv, encoding_option, mode);
         console.log(encodedStringBtoA)
-        var encodedStringBtoA = aesDecrypt(text_data, key, iv, bits, mode);
-        console.log(encodedStringBtoA)
-
+        
         if (encodedStringBtoA) {
             set_result(encodedStringBtoA)
         } else {
-            
+            set_result("Invalid input provided")
         }
     }
 
-    function decrypt(text_data, key, iv, bits, mode) {
+    function decrypt(text_data, key, iv, encoding_option, mode) {
         // Encode the String
-        var decodedString = aesDecrypt(text_data, key, iv, bits, mode);
-
+        var decodedString = aesDecrypt(text_data, key, iv, encoding_option, mode);
+        
         if (decodedString) {
             set_result(decodedString)
         } else {
-            
+            set_result("Invalid input provided")
         }
     }
 
@@ -80,18 +86,7 @@
         return false
     }
     
-    function encryptWithKey(plaintext, key){
-        var encrypted = CryptoJS.AES.encrypt(plaintext, key, { mode: CryptoJS.mode.ECB });
-        console.log("Ciphertext (Base64):\n" + encrypted.toString());        // Ciphertext
-        var decrypted = CryptoJS.AES.decrypt(encrypted.toString(), key, { mode: CryptoJS.mode.ECB });
-        console.log("Decrypted:\n" + decrypted.toString(CryptoJS.enc.Utf8)); // Plaintext
-    }
     
-    var key = CryptoJS.enc.Hex.parse('000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f');
-    var key = CryptoJS.enc.Utf8.parse('a')
-    console.log(key)
-    encryptWithKey('a', key);
-    encryptWithKey('a', key);
 
     function call_server(function_name) {
         var textString = 'Hello world'; // Utf8-encoded string
@@ -109,6 +104,12 @@
             return false;
         }
 
+        if (encryption_key.length < 4) {
+            alert("Encryption key must be atleast 4 characters long");
+            document.getElementById("encryption_key").focus();
+            return false;
+        }
+
         encryption_iv = document.getElementById("encryption_iv").value
         if (encryption_iv == "") {
             alert("Enter encryption IV value");
@@ -116,9 +117,9 @@
             return false;
         }
 
-        var bits = get_checked_value(document.getElementsByName('bits'))
-        if (bits == false) {
-            alert("Enter bits");
+        var encoding_option = get_checked_value(document.getElementsByName('encoding'))
+        if (encoding_option == false) {
+            alert("Enter encoding");
             return false;
         }
         var mode = get_checked_value(document.getElementsByName('mode'))
@@ -137,11 +138,11 @@
         switch (function_name) {
             case "aes-encryption":
                 // code block
-                encrypt(text_data, encryption_key, encryption_iv, bits, mode)
+                encrypt(text_data, encryption_key, encryption_iv, encoding_option, mode)
                 break;
             case "aes-decryption":
                 // code block
-                decrypt(text_data, encryption_key, encryption_iv, bits, mode)
+                decrypt(text_data, encryption_key, encryption_iv, encoding_option, mode)
                 break;
             default:
                 // code block
