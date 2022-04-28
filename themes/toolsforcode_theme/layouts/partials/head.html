@@ -5,9 +5,9 @@
     
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="robots" content="index, follow" />
-    <title>Toolsforcode - Free handy tools to help you while coding</title>
-    <meta property="og:title" content="Toolsforcode - Free handy tools to help you while coding" />
-    <meta name="description" content="Toolsforcode - Free handy tools to help you while coding" />
+    <title>{{ if .Params.Title }}{{ .Params.Title }}{{ else }}Toolsforcode - Free handy tools to help you while coding{{ end }}</title>
+    <meta property="og:title" content="{{ if .Params.Title }}{{ .Params.Title }}{{ else }}Toolsforcode - Free handy tools to help you while coding{{ end }}" />
+    <meta name="description" content="{{ if .Params.description }}{{ .Params.description }}{{ else }}Toolsforcode - Free handy tools to help you while coding{{ end }}" />
     <meta name="robots" content="index, follow" />
     <meta property="og:image" content="" />
     <meta name="twitter:image" content="" />
@@ -25,4 +25,6 @@
     <link rel="stylesheet" href="/css/tailwind.output.css" />
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
     <script src="/js/init-alpine.js"></script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2027035265840672"
+     crossorigin="anonymous"></script>
   </head>
