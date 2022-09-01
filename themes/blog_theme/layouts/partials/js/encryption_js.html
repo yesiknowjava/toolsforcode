@@ -1,0 +1,154 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"
+    integrity="sha512-E8QSvWZ0eCLGk4km3hxSsNmGWbLtSCSUcewDQPQWZF6pEU8GlT8a5fF32wOl1i8ftdMhssTrF/OhyGWwonTcXA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+<script>
+    
+
+    function aesEncrypt(data, key, iv, encoding_option, mode) {
+        if (mode == 'cbc') {
+            mode = CryptoJS.mode.CBC
+        } else {
+            mode = CryptoJS.mode.ECB
+        }
+        if (encoding_option == 'hex') {
+            key = CryptoJS.enc.Hex.parse(key)
+            iv = CryptoJS.enc.Hex.parse(iv)
+        } else {
+            key = CryptoJS.enc.Utf8.parse(key)
+            iv = CryptoJS.enc.Utf8.parse(iv)
+        }
+        const cipher = CryptoJS.AES.encrypt(data, key, {
+            iv: iv, // parse the IV 
+            padding: CryptoJS.pad.Pkcs7,
+            mode: mode
+            
+        })
+        return cipher.toString()
+    }
+
+    function aesDecrypt(data, key, iv, encoding_option, mode) {
+        if (mode == 'cbc') {
+            mode = CryptoJS.mode.CBC
+        } else {
+            mode = CryptoJS.mode.ECB
+        }
+        if (encoding_option == 'hex') {
+            key = CryptoJS.enc.Hex.parse(key)
+            iv = CryptoJS.enc.Hex.parse(iv)
+        } else {
+            key = CryptoJS.enc.Utf8.parse(key)
+            iv = CryptoJS.enc.Utf8.parse(iv)
+        }
+        const cipher = CryptoJS.AES.decrypt(data, key, {
+            iv: iv, // parse the IV 
+            padding: CryptoJS.pad.Pkcs7,
+            mode: mode
+            
+        })
+        return cipher.toString(CryptoJS.enc.Utf8)
+    }
+
+    function set_result(result) {
+        document.getElementById("result_data").innerHTML = result
+    }
+
+    function encrypt(text_data, key, iv, encoding_option, mode) {
+        // Encode the String
+        var encodedStringBtoA = aesEncrypt(text_data, key, iv, encoding_option, mode);
+        console.log(encodedStringBtoA)
+        
+        if (encodedStringBtoA) {
+            set_result(encodedStringBtoA)
+        } else {
+            set_result("Invalid input provided")
+        }
+    }
+
+    function decrypt(text_data, key, iv, encoding_option, mode) {
+        // Encode the String
+        var decodedString = aesDecrypt(text_data, key, iv, encoding_option, mode);
+        
+        if (decodedString) {
+            set_result(decodedString)
+        } else {
+            set_result("Invalid input provided")
+        }
+    }
+
+    function get_checked_value(options) {
+        for (var option of options) {
+            if (option.checked) {
+                return option.value;
+            }
+        }
+        return false
+    }
+    
+    
+
+    function call_server(function_name) {
+        var textString = 'Hello world'; // Utf8-encoded string
+        var words = CryptoJS.enc.Utf8.parse(textString); // WordArray object
+        var base64 = CryptoJS.enc.Base64.stringify(words); // string: 'SGVsbG8gd29ybGQ='
+
+        var base64 = 'SGVsbG8gd29ybGQ=';
+        var words = CryptoJS.enc.Base64.parse(base64);
+        var textString = CryptoJS.enc.Utf8.stringify(words); // 'Hello world'
+
+        encryption_key = document.getElementById("encryption_key").value
+        if (encryption_key == "") {
+            alert("Enter encryption key");
+            document.getElementById("encryption_key").focus();
+            return false;
+        }
+
+        if (encryption_key.length < 4) {
+            alert("Encryption key must be atleast 4 characters long");
+            document.getElementById("encryption_key").focus();
+            return false;
+        }
+
+        encryption_iv = document.getElementById("encryption_iv").value
+        if (encryption_iv == "") {
+            alert("Enter encryption IV value");
+            document.getElementById("encryption_iv").focus();
+            return false;
+        }
+
+        var encoding_option = get_checked_value(document.getElementsByName('encoding'))
+        if (encoding_option == false) {
+            alert("Enter encoding");
+            return false;
+        }
+        var mode = get_checked_value(document.getElementsByName('mode'))
+        if (mode == false) {
+            alert("Enter mode");
+            return false;
+        }
+
+        text_data = document.getElementById("raw_input").value
+        if (text_data == "") {
+            alert("Enter text to be encoded");
+            document.getElementById("raw_input").focus();
+            return false;
+        }
+
+        switch (function_name) {
+            case "aes-encryption":
+                // code block
+                encrypt(text_data, encryption_key, encryption_iv, encoding_option, mode)
+                break;
+            case "aes-decryption":
+                // code block
+                decrypt(text_data, encryption_key, encryption_iv, encoding_option, mode)
+                break;
+            default:
+                // code block
+        }
+
+
+
+    }
+</script>

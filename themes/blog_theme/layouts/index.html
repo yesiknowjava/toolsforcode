@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{{ partial "head.html" . }}
+
+<body>
+    {{ partial "header.html" . }}
+    <!-- MOBILE NAVIGATION -->
+    {{ partial "mobile.html" . }}
+
+    {{/*  {{ partial "top-banners-home.html" . }}  */}}
+    <main>
+        <div class="container">
+            <div class="row">
+                <!-- ARTICLES -->
+                <div class="col-lg-8 col-xs-12">
+                    <section class="articles">
+                        {{ range where .Paginator.Pages "Section" "posts" }}
+                            {{ partial "post.html" . }}
+                        {{ end }}
+
+                        <!-- PAGINATION -->
+                        {{ partial "pagination.html" . }}
+                    </section>
+                </div>
+
+                <!-- AUTHOR -->
+                <div class="aside-blocks col-lg-4 col-xs-12">
+                    {{ partial "advertisement.html" . }}
+                    {{ partial "tools-sidebar.html" . }}
+                    {{ partial "categories.html" . }}
+                    {{ partial "tags.html" . }}
+
+                    
+                </div>
+            </div>
+        </div>
+    </main>
+    {{ partial "footer.html" . }}
+
+</body>
+
+</html>

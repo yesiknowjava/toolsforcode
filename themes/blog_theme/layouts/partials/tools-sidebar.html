@@ -1,0 +1,14 @@
+<section class="categories">
+    <h2 class="aside-blocks-title">Tools</h2>
+    <ul>
+    {{ range (where .Site.Pages "Section" "tools") }}
+  {{ range .Pages }}
+    <li><a href="{{ .RelPermalink }}"
+        title="{{ .Title }} ">{{ .Title }}</a></li>
+  {{ end }}
+{{ end }}
+    
+       
+       
+    </ul>
+</section>

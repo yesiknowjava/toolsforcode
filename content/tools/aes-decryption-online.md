@@ -1,5 +1,6 @@
 ---
 title: "AES Decryption Online - advanced encryption standard"
+url: "aes-decryption-online"
 draft: false
 type: "aes_layout"
 button_title: "AES Decrypt"

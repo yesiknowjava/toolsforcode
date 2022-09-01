@@ -1,0 +1,133 @@
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js" integrity="sha512-E8QSvWZ0eCLGk4km3hxSsNmGWbLtSCSUcewDQPQWZF6pEU8GlT8a5fF32wOl1i8ftdMhssTrF/OhyGWwonTcXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+{{/*  <script type="text/javascript">
+    console.log('encrypted', CryptoJS.AES.encrypt('themessage', 'thekey').toString());
+</script>  */}}
+
+<script>
+console.log('whats up!')
+
+var ciphertext = CryptoJS.AES.encrypt('themessage', 'thekey').toString();
+console.log('encrypted', CryptoJS.AES.encrypt('themessage', 'thekey').toString());
+
+function aesEncrypt (data, key, iv) {
+    {{/*  const key = '6fa979f20126cb08aa645a8f495f6d85'  */}}
+    {{/*  const iv = 'I8zyA4lVhMCaJ5Kg'  */}}
+    
+    const cipher = CryptoJS.AES.encrypt(data, CryptoJS.enc.Utf8.parse(key), {
+        iv: CryptoJS.enc.Utf8.parse(iv), // parse the IV 
+        padding: CryptoJS.pad.Pkcs7,
+        mode: CryptoJS.mode.CBC
+    })
+    alert("called")
+    // e.g. B6AeMHPHkEe7/KHsZ6TW/Q==
+    return cipher.toString()
+ }
+ {{/*  alert(aesEncrypt("Hare Krishna"))  */}}
+</script>
+
+<script>
+    
+
+    {{/*  const encryptWithAES = (text) => {
+    const passphrase = '123';
+    console.log(CryptoJS.AES.encrypt(text, passphrase).toString());
+    };
+
+    const decryptWithAES = (ciphertext) => {
+    const passphrase = '123';
+    const bytes = CryptoJS.AES.decrypt(ciphertext, passphrase);
+    const originalText = bytes.toString(CryptoJS.enc.Utf8);
+    console.log(originalText);
+    };  */}}
+
+    function set_result(result) {
+        document.getElementById("result_data").innerHTML = result
+    }
+
+    function encrypt(text_data, key, iv) {
+        // Encode the String
+        var encodedStringBtoA = aesEncrypt (text_data, key, iv);
+
+        if (encodedStringBtoA) {
+            set_result(encodedStringBtoA)
+        } else {
+            var myHeaders = new Headers();
+            var raw = JSON.stringify([{
+            "source_string": text_data
+            }]);
+
+            var requestOptions = {
+            method: 'POST',
+            headers: myHeaders,
+            body: raw,
+            redirect: 'follow'
+            };
+
+            fetch("https://5f4dlh7trgjlw4nfqlplfib4xa0izcpv.lambda-url.us-east-2.on.aws/?mydata=krishna", requestOptions)
+            .then(response => response.text())
+            .then(result => set_result(result[0]["encoded"]))
+            .catch(error => console.log('error', error));
+        }
+    }
+
+    function decrypt(text_data, key, iv) {
+        // Encode the String
+        var decodedString = atob(text_data);
+
+        if (decodedString) {
+            set_result(decodedString)
+        } else {
+            var myHeaders = new Headers();
+            var raw = JSON.stringify([{
+            "source_string": text_data
+            }]);
+
+            var requestOptions = {
+            method: 'POST',
+            headers: myHeaders,
+            body: raw,
+            redirect: 'follow'
+            };
+
+            fetch("https://5f4dlh7trgjlw4nfqlplfib4xa0izcpv.lambda-url.us-east-2.on.aws/?mydata=krishna", requestOptions)
+            .then(response => response.text())
+            .then(result => set_result(result[0]["encoded"]))
+            .catch(error => console.log('error', error));
+        }
+    }
+
+    function get_checked_value(options) {
+        for (var option of options)
+        {
+            if (option.checked) {
+                alert(option.value);
+            }
+        }
+    }
+    function call_server(function_name) {
+
+        text_data = document.getElementById("raw_input").value
+        encryption_key = document.getElementById("encryption_key").value
+        encryption_iv = document.getElementById("encryption_iv").value
+
+        var bits = get_checked_value(document.getElementsByName('bits'))
+        var mode = get_checked_value(document.getElementsByName('mode'))
+        
+        switch(function_name) {
+            case "encrypt":
+                // code block
+                encrypt(text_data, encryption_key, encryption_iv)
+                break;
+            case "decrypt":
+                // code block
+                decrypt(text_data)
+                break;
+            default:
+                // code block
+        }
+
+        
+        
+    }
+</script>

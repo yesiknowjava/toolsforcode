@@ -1,8 +1,19 @@
-baseURL = 'https://toolsforcode.pages.dev/'
+baseURL = 'https://toolsforcode.com/'
 languageCode = 'en-us'
 title = 'Toolsforcode'
-theme = "toolsforcode_theme"
+theme = "blog_theme"
 enableRobotsTXT = true
+
+
+paginate = 20
+#pygmentsUseClasses = true
+pygmentsUseClassic = true
+PygmentsCodeFences = true
+PygmentsStyle      = "autumn"#'vs'
+summaryLength = 15
+googleAnalytics = "UA-70790861-3"
+author = "Prabhakar S"
+site_variable = "Yes"
 
 disableHugoGeneratorInject = true
 
