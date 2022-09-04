@@ -1,5 +1,6 @@
 ---
 title: "Base64 decode online"
+url: "base64decode"
 draft: false
 type: "base64_layout"
 button_title: "Decode"

@@ -1,8 +1,18 @@
-baseURL = 'https://toolsforcode.pages.dev/'
+baseURL = 'https://toolsforcode.com/'
 languageCode = 'en-us'
 title = 'Toolsforcode'
-theme = "toolsforcode_theme"
+theme = "blog_theme"
 enableRobotsTXT = true
+
+paginate = 20
+#pygmentsUseClasses = true
+pygmentsUseClassic = true
+PygmentsCodeFences = true
+PygmentsStyle      = "autumn"#'vs'
+summaryLength = 15
+googleAnalytics = "UA-70790861-3"
+author = "Prabhakar S"
+site_variable = "Yes"
 
 disableHugoGeneratorInject = true
 
@@ -24,3 +34,20 @@ mediaType = "application/rdf+xml"
 
 [outputs]
 page = ["HTML"]
+
+
+[markup]
+  [markup.highlight]
+    anchorLineNos = false
+    codeFences = true
+    guessSyntax = false
+    hl_Lines = ''
+    hl_inline = false
+    lineAnchors = ''
+    lineNoStart = 1
+    lineNos = false
+    lineNumbersInTable = true
+    noClasses = true
+    noHl = false
+    style = 'monokai'
+    tabWidth = 4

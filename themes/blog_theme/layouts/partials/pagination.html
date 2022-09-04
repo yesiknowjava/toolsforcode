@@ -1,0 +1,61 @@
+{{ $pag := $.Paginator }}
+{{ if gt $pag.TotalPages 1 }}
+{{ $.Scratch.Set "dot_rendered" false }}
+<nav class="articles-navigation d-flex justify-content-between align-items-center" aria-label="...">
+    {{ if $pag.HasPrev  }}
+        <a title="" href="{{ $pag.Prev.URL }}"
+        class="btn-small-white pagination-back">Back</a>
+    {{ end }}
+<ul class="pagination d-none d-md-flex">
+    {{ if and (ne $pag.PageNumber 1) (ne $pag.PageNumber 2) }}
+        <li class="page-item">
+            <a class="page-link" href="{{ $pag.First.URL }}" aria-label="Pagination Arrow">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentcolor" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M12 8a.5.5.0 01-.5.5H5.707l2.147 2.146a.5.5.0 01-.708.708l-3-3a.5.5.0 010-.708l3-3a.5.5.0 11.708.708L5.707 7.5H11.5a.5.5.0 01.5.5z"></path>
+                </svg>
+            </a>
+        </li>
+    {{ end }}
+    
+    {{ range $pag.Pagers }}
+        {{ if eq . $pag }} <!-- Current Page -->
+        <li class="page-item active">
+            <a class="page-link" href="{{ .URL }}">{{ .PageNumber }} <span
+                    class="sr-only">(current)</span></a>
+        </li>
+        {{ else if and (ge .PageNumber (sub $pag.PageNumber 2)) (le .PageNumber (add $pag.PageNumber 2)) }}
+        {{ $.Scratch.Set "dot_rendered" false }} <!-- Render prev 2 page and next 2 pages -->
+        <li class="page-item"><a class="page-link" href="{{ .URL }}">{{ .PageNumber }}</a>
+        </li>
+        {{ else if eq ($.Scratch.Get "dot_rendered") false }} <!-- render skip pages -->
+        {{ $.Scratch.Set "dot_rendered" true }}
+        <li class="page-item page-item-more"><a class="page-link"
+            href="">...</a></li>
+        {{ end }}
+    {{ end }}
+
+    
+    
+    {{ if and (ne $pag.PageNumber $pag.TotalPages) ((ne $pag.PageNumber (sub $pag.TotalPages 1))) }}
+    <li class="page-item"><a class="page-link"
+            href="{{ $pag.Last.URL }}"
+            aria-label="Pagination Arrow"><svg
+                xmlns="http://www.w3.org/2000/svg" width="24"
+                height="24" fill="currentcolor" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                    d="M4 8a.5.5.0 01.5-.5h5.793L8.146 5.354a.5.5.0 11.708-.708l3 3a.5.5.0 010 .708l-3 3a.5.5.0 01-.708-.708L10.293 8.5H4.5A.5.5.0 014 8z">
+                </path>
+            </svg></a></li>
+    {{ end }}
+</ul>
+{{ if $pag.HasNext }}
+    <a title="" href="{{ $pag.Next.URL }}"
+        class="btn-small-white pagination-next">Next</a>
+    {{ end }}
+</nav>
+
+{{ end }}
+
+    
+    
+</nav>

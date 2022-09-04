@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{{ partial "head.html" . }}
+
+<style>
+
+p {
+    font-family: "Merriweather", serif;
+    letter-spacing: -0.05px;
+}
+
+.articles-blog-post-text {
+    font-size: 16px;
+    line-height: 36px;
+    font-weight: 300;
+}
+
+h5 {
+    font-size: 24px;
+    margin-bottom: 1rem;
+    margin-top: 1.5rem;
+}
+</style>
+
+<body>
+    {{ partial "header.html" . }}
+    <!-- MOBILE NAVIGATION -->
+    {{ partial "mobile.html" . }}
+
+    <main>
+        <div class="container articles-blog-post-text">
+            <div class="row">
+                <!-- ARTICLES -->
+                <div class="col-lg-8 col-xs-12">
+                    <section class="articles">
+                        {{ partial "post_full.html" . }}
+                    </section>
+                </div>
+
+                <!-- AUTHOR -->
+                <div class="aside-blocks col-lg-4 col-xs-12">
+                    {{ partial "advertisement.html" . }}
+                    {{ partial "categories.html" . }}
+                    {{ partial "tags.html" . }}
+                </div>
+            </div>
+        </div>
+    </main>
+    {{ partial "footer.html" . }}
+
+</body>
+
+</html>
