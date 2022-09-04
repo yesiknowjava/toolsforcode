@@ -1,4 +1,13 @@
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-S80THZ27XE"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-S80THZ27XE');
+    </script>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,5 +25,22 @@
     <link rel="preload" as="image" href='{{ "./images/photo1_2x.webp" | relURL }}'>
     <link rel="preload" as="image" href='{{ "./images/photo2_2x.webp" | relURL }}'>
     <link rel="stylesheet" href='{{"./css/main.css" | relURL }}'>
-    <title>DBlog - Blog for Developers</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="robots" content="index, follow" />
+    <title>{{ if .Params.Title }}{{ .Params.Title }}{{ else }}Toolsforcode - Free handy tools to help you while coding{{ end }}</title>
+    <meta property="og:title" content="{{ if .Params.Title }}{{ .Params.Title }}{{ else }}Toolsforcode - Free handy tools to help you while coding{{ end }}" />
+    <meta name="description" content="{{ if .Params.description }}{{ .Params.description }}{{ else }}Toolsforcode - Free handy tools to help you while coding{{ end }}" />
+    <meta name="robots" content="index, follow" />
+    <meta property="og:image" content="" />
+    <meta name="twitter:image" content="" />
+    <meta name="twitter:image:src" content="" />
+    <script type="application/ld+json">
+        {
+        "@context": "https://schema.org",
+        "@type": "Corporation",
+        "name": "Toolsforcode",
+        "url": "https://www.toolsforcode.com",
+        "logo": ""
+        }
+    </script>
 </head>

@@ -5,7 +5,7 @@ image = "/img/python-interview-questions-part2.jpg"
 featuredImage = "/img/python-interview-questions-part2.jpg"
 tags = ["code"]
 categories = ["code"]
-date = 2019-11-04T00:46:44.431Z
+date = 2022-08-04T00:46:44.431Z
 draft = false
 +++
   
@@ -24,7 +24,7 @@ This is a growing list hence, the article has been broken down into multiple par
   
 Generate a Fibonacci series for a given number
 
-{{< highlight python "linenos=table" >}}
+{{< highlight python >}}
 a,b,n = 0,1,10
 for i in range(0, n):
     print(a, end=', ')
@@ -37,7 +37,7 @@ for i in range(0, n):
 There are many ways of implementing this.
 
 __String Reverse__
-{{< highlight python "linenos=table" >}}
+{{< highlight python >}}
 mystring = 'malayalam'
 reverse_mystring = mystring[::-1]
 reverse_mystring = ''.join(reversed(mystring))
@@ -51,7 +51,7 @@ else:
 <p></p>
 
 __String Reverse__
-{{< highlight python "linenos=table" >}}
+{{< highlight python >}}
 def isPalindrome(str):
     for i in range(0, len(str)//2):
         if str[i] != str[len(str)-i-1]:
@@ -64,7 +64,7 @@ def isPalindrome(str):
 
 #### If you have multiple decorators for a function, which would be called first
 
-{{< highlight python "linenos=table" >}}
+{{< highlight python >}}
 def a(f):
     def wrapperxx(*args, **kwargs):
         print("a")
@@ -93,7 +93,7 @@ myfunction("Prabhakar")
 
 The result would be
 
-{{< highlight python "linenos=table" >}}
+{{< highlight python >}}
 a
 b
 c

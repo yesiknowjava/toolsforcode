@@ -4,7 +4,7 @@ description = "This article explains how to use a tool called python translate t
 image = "/img/translate-toolkit.jpg"
 tags = ["python", "tools", "csv"]
 categories = ["code"]
-date = 2019-06-01T08:56:24.235Z
+date = 2022-08-01T08:56:24.235Z
 draft = false
 +++
 In my day job I work as a django developer, I once had to convert the translation files which are of the format '.po'

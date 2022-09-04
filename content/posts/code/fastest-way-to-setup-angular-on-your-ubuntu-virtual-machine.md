@@ -1,6 +1,6 @@
 ---
 title: "Fastest Way to Setup Angular on Your Ubuntu Virtual Machine"
-date: 2018-10-19T14:24:24+05:30
+date: 2022-08-19T14:24:24+05:30
 draft: false
 categories: ["code"]
 tags: ["e-learning"]

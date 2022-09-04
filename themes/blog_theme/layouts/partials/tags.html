@@ -1,17 +1,9 @@
 <section class="tags">
     <h2 class="aside-blocks-title">Tags</h2>
     <ul class="tags-content">
-        <li class="badge rounded-pill"><a
-                href="">graphic</a></li>
-        <li class="badge rounded-pill"><a
-                href="">angular2</a></li>
-        <li class="badge rounded-pill"><a
-                href="">graphic</a></li>
-        <li class="badge rounded-pill"><a
-                href="">react</a></li>
-        <li class="badge rounded-pill"><a
-                href="">it</a></li>
-        <li class="badge rounded-pill"><a
-                href="">science</a></li>
+    {{ range $name, $items := .Site.Taxonomies.tags }}
+    <li class="badge rounded-pill"><a
+        href="{{ $.Site.BaseURL }}tags/{{ $name | urlize | lower }}/">{{ $name }} - {{ len $items }}</a></li>
+    {{ end }}
     </ul>
 </section>

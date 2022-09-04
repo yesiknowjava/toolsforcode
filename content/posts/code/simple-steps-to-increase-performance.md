@@ -1,6 +1,6 @@
 ---
 title: "Simple steps to increase the performance of a web application."
-date: 2019-11-02T14:24:24+05:30
+date: 2022-08-02T14:24:24+05:30
 draft: false
 categories: ["code"]
 tags: ["e-learning"]

@@ -1,6 +1,6 @@
 ---
 title: "dummy category"
-date: 2018-10-06T19:25:55+05:30
+date: 2022-08-06T19:25:55+05:30
 draft: true
 categories: ["web-hosting",  "pcs-and-laptops", "mobiles-tablets"]
 tags: ["shared-hosting", "vps-hosting", "wordpress-hosting", "cloud-hosting"]

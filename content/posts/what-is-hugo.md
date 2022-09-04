@@ -1,6 +1,6 @@
 ---
 title: "What is Hugo"
-date: 2018-10-06T19:43:28+05:30
+date: 2022-08-06T19:43:28+05:30
 draft: true
 categories: ["web-hosting"]
 tags: ["hosting", "featured"]

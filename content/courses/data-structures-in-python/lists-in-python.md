@@ -8,7 +8,7 @@ image = "/img/python-interview-questions.jpg"
 featuredImage = "/img/python-interview-questions.jpg"
 tags = []
 categories = []
-date = 2019-10-18T09:46:44.431Z
+date = 2022-08-18T09:46:44.431Z
 draft = false
 weight = 1
 +++
@@ -16,7 +16,7 @@ A list is a sequence of objects that can hold strings, numbers, objects and othe
 
 A list is represented using the ```[]``` brackets.
 
-{{< highlight python "linenos=table" >}}
+{{< highlight python >}}
 a = [1,2,3]
 b = [1, 'string', {1:1}, a] #lists can have anything in them
 {{< / highlight >}}
@@ -46,7 +46,7 @@ Note : The ```remove``` method will throw an eror if the item does not exist in 
 
 Given a list of temperatures ```[73, 74, 75, 71, 69, 72, 76, 73]``` for each day, can we find how many days it will take to get a warmer day than the present day. In our case it should print a list ```[1, 1, 4, 2, 1, 1, 0, 0]```
 
-{{< highlight python "linenos=table" >}}
+{{< highlight python >}}
 def get_next_best_list(i, temp_list, bst_list):
     counter = 0
     found = False
@@ -80,7 +80,7 @@ The logic is pretty much straight forward. First we call the get_next_best_list 
 <p></p>
 
 __Method 1__
-{{< highlight python "linenos=table" >}}
+{{< highlight python >}}
 def perm1(lst):
 	if len(lst) == 0:
 		return []
@@ -98,7 +98,7 @@ def perm1(lst):
 <p></p>
 
 __Method 2__
-{{< highlight python "linenos=table" >}}
+{{< highlight python >}}
 def combs(a):
     if len(a) == 0:
         return [[]]
@@ -112,7 +112,7 @@ def combs(a):
 <p></p>
 
 __Method 3 : Python's inbuilt tool__
-{{< highlight python "linenos=table" >}}
+{{< highlight python >}}
 # Function which returns subset or r length from n 
 from itertools import combinations 
 

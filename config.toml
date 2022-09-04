@@ -4,7 +4,6 @@ title = 'Toolsforcode'
 theme = "blog_theme"
 enableRobotsTXT = true
 
-
 paginate = 20
 #pygmentsUseClasses = true
 pygmentsUseClassic = true
@@ -35,3 +34,20 @@ mediaType = "application/rdf+xml"
 
 [outputs]
 page = ["HTML"]
+
+
+[markup]
+  [markup.highlight]
+    anchorLineNos = false
+    codeFences = true
+    guessSyntax = false
+    hl_Lines = ''
+    hl_inline = false
+    lineAnchors = ''
+    lineNoStart = 1
+    lineNos = false
+    lineNumbersInTable = true
+    noClasses = true
+    noHl = false
+    style = 'monokai'
+    tabWidth = 4

@@ -8,14 +8,14 @@ image = "/img/python-interview-questions.jpg"
 featuredImage = "/img/python-interview-questions.jpg"
 tags = []
 categories = []
-date = 2019-10-18T09:46:44.431Z
+date = 2022-08-18T09:46:44.431Z
 draft = false
 weight = 2
 +++
 
 A dictionary is a hash map contaning key value pairs. In python dictionaries are represented like this
 
-{{< highlight python "linenos=table" >}}
+{{< highlight python >}}
 dt = {
     'apples': 2,
     'oranges': 5
@@ -26,7 +26,7 @@ One thing to note here is that, dictionaries are great for searching as the orde
   
 You can use strings, numbers or tuples as keys for dictionaries like so
 
-{{< highlight python "linenos=table" >}}
+{{< highlight python >}}
 dt = {
     1: 1,
     'astring': 2,
@@ -42,7 +42,7 @@ Suppose we want the net asset value (nav) of emp id 1, that would be 5 + 3 + 3 +
 
 Solution : The best way to solve this problem is to first convert the list into a dict.
 
-{{< highlight python "linenos=table" >}}
+{{< highlight python >}}
 def form_dict(data):
     data_dict = {}
     for item in data:
@@ -55,7 +55,7 @@ def form_dict(data):
 
 Next we try to create a list with the value of each employee involved, by calling a recursive function.
 
-{{< highlight python "linenos=table" >}}
+{{< highlight python >}}
 def calculate_worth(data_dict, id, worth_list=[]):
     try:
         worth_list.append(data_dict[id]['worth'])

@@ -5,7 +5,7 @@ image = "/img/javascript-interview-questions.jpg"
 featuredImage = "/img/javascript-interview-questions.jpg"
 tags = ["code"]
 categories = ["code"]
-date = 2019-11-02T09:46:44.431Z
+date = 2022-08-02T09:46:44.431Z
 draft = false
 +++
   
@@ -29,7 +29,7 @@ There are 3 fundamental differences between Javascript Object and JSON format. T
 #### Difference between var and let
 ```var``` can be redeclared within {}, but ```let``` cannot be redeclared. 
 
-{{< highlight javascript "linenos=table" >}}
+{{< highlight javascript >}}
 var a = "my string";
 var a = 5;// Does not throw error
 

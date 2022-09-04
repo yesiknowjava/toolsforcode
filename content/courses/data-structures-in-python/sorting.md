@@ -8,7 +8,7 @@ image = "/img/python-interview-questions.jpg"
 featuredImage = "/img/python-interview-questions.jpg"
 tags = []
 categories = []
-date = 2019-11-04T01:46:44.431Z
+date = 2022-08-04T01:46:44.431Z
 draft = false
 weight = 8
 +++

@@ -1,6 +1,6 @@
 ---
 title: "Tutorial Sites List Free Paid Programmers"
-date: 2018-10-19T14:29:26+05:30
+date: 2022-08-19T14:29:26+05:30
 draft: false
 categories: ["code"]
 tags: ["e-learning"]

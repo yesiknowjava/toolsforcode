@@ -1,6 +1,6 @@
 ---
 title: "Types of Web Hosting"
-date: 2018-10-19T14:48:11+05:30
+date: 2022-08-19T14:48:11+05:30
 draft: false
 categories: ["web-hosting"]
 tags: ["e-learning", featured]

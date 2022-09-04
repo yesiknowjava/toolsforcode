@@ -1,6 +1,6 @@
 ---
 title: "Waterproof Kindle Paperwhite 2018"
-date: 2018-10-20T23:04:55+05:30
+date: 2022-08-20T23:04:55+05:30
 draft: true
 categories: ["mobiles-tablets"]
 tags: ["e-ink"]
