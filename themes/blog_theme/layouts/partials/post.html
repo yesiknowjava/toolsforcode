@@ -1,3 +1,4 @@
+{{$category := index (.Params.categories) 0}}
 <article class="blue-article">
     <div class="articles-header">
         <time datetime="2022-10-11">
@@ -8,7 +9,7 @@
         <span class="articles-header-tag-blue">Hot</span>
         <span class="articles-header-category">
             <a href="" class="blue"
-                title="">{{ .Params.categories.0 }}</a>
+                title="">{{ $category }}</a>
         </span>
     </div>
     <div class="articles-content">
