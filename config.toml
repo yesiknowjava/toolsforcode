@@ -10,7 +10,6 @@ pygmentsUseClassic = true
 PygmentsCodeFences = true
 PygmentsStyle      = "autumn"#'vs'
 summaryLength = 15
-googleAnalytics = "G-7WP76ZRERD"
 author = "Prabhakar S"
 site_variable = "Yes"
 
