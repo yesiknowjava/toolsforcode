@@ -2,6 +2,7 @@
 title: "What is Hugo"
 date: 2022-08-06T19:43:28+05:30
 draft: true
+image: "images/post/post-2.png"
 categories: ["web-hosting"]
 tags: ["hosting", "featured"]
 ---

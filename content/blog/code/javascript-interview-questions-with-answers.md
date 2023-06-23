@@ -1,7 +1,7 @@
 +++
 title = "Javascript interview questions with answers"
 description = "Growing list of python questions with simple answers"
-image = "/img/javascript-interview-questions.jpg"
+image = "images/post/post-2.png"
 featuredImage = "/img/javascript-interview-questions.jpg"
 tags = ["code"]
 categories = ["code"]

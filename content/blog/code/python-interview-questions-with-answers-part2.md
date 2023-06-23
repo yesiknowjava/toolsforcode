@@ -1,7 +1,6 @@
 +++
 title = "Python interview questions with answers part 2"
 description = "Growing list of python questions with simple answers"
-image = "/img/python-interview-questions-part2.jpg"
 featuredImage = "/img/python-interview-questions-part2.jpg"
 tags = ["code"]
 categories = ["code"]

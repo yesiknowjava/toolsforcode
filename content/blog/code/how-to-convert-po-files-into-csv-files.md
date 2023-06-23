@@ -1,7 +1,6 @@
 +++
 title = "How to convert po files into csv files"
 description = "This article explains how to use a tool called python translate toolkit to convert an existing po file into a csv file."
-image = "/img/translate-toolkit.jpg"
 tags = ["python", "tools", "csv"]
 categories = ["code"]
 date = 2022-08-01T08:56:24.235Z

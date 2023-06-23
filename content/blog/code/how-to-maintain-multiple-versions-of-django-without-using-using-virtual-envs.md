@@ -1,7 +1,6 @@
 +++
 title = "How to maintain multiple versions of django without using using virtual envs."
 description = "Installing and running django version 1.x and django version 2.x in the same machine without using virtual env"
-image = "/img/webhosting2.jpg"
 featuredImage = "/img/webhosting2.jpg"
 tags = ["code"]
 categories = ["code"]
