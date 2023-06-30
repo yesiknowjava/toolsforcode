@@ -1,7 +1,7 @@
 ---
 title: "My work from home workstation"
 description: "meta description"
-image: "images/post/post-5.png"
+# image: "images/post/post-5.png"
 date: 2021-01-24T18:19:25+06:00
 categories: ["workstation"]
 tags: ["lifestyle"]

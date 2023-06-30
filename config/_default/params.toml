@@ -7,12 +7,12 @@ logo = "images/logo.png"
 # Note: logo_width is not work with .svg file
 logo_width = "150x"
 # logo text will only show when logo is missing.
-logo_text = "Geeky"
+logo_text = "Tools for code"
 # navbar fixed to top
 navbar_fixed = false
 # OpenGraph / Twitter Card metadata
 description = "This is meta description"
-author = "Themefisher"
+author = "Prabhakar Shanmugam"
 image = "images/logo.png" # this image will be used as fallback if a page has no image of its own
 # contact info
 address = "9567 Turner Trace Apt. BC C3G8A4"
@@ -46,8 +46,8 @@ footer_content = "Lorem ipsum dolor sit amt, conse adip iscing. donec iaculis te
 # custom script on header, example: custom_script= "<script>console.log(\"Hello World\")</script>" 
 custom_script= ""
 # copyright
-theme_copyright = true
-copyright = "Copyright by your company"
+theme_copyright = false
+copyright = "Copyright by Tools for code"
 
 # 404
 error_404_text = "404 Page Not Found!"
@@ -60,7 +60,7 @@ preloader = "" # use jpg, png, svg or gif format.
 
 # Banner
 [banner]
-enable = true
+enable = false
 title_large = "Welcome **!**"
 title_small = "to Jhon Bravo Blog"
 image = "images/banner.png"

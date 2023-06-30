@@ -1,7 +1,7 @@
 +++
 title = "Javascript interview questions with answers"
 description = "Growing list of python questions with simple answers"
-image = "images/post/post-2.png"
+# image = "images/post/post-2.png"
 featuredImage = "/img/javascript-interview-questions.jpg"
 tags = ["code"]
 categories = ["code"]
@@ -29,7 +29,7 @@ There are 3 fundamental differences between Javascript Object and JSON format. T
 #### Difference between var and let
 ```var``` can be redeclared within {}, but ```let``` cannot be redeclared. 
 
-{{< highlight javascript >}}
+{{< highlight javascript "hl_lines=2" >}}
 var a = "my string";
 var a = 5;// Does not throw error
 
@@ -39,7 +39,7 @@ let a = 5;// Uncaught SyntaxError: Identifier 'a' has already been declared
 
 While ```var``` has function scope, ```let``` has block scope.
 
-{{< highlight javascript >}}
+{{< highlight javascript "hl_lines=4-6" >}}
 for(var i=10; i<20; i++) {
     //do something
 }

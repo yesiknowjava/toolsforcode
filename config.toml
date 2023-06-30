@@ -65,3 +65,13 @@ link = "plugins/cookie.js"
 # [[params.plugins.js]]
 # link = "https://cpwebassets.codepen.io/assets/embed/ei.js"
 # attributes = "async"
+
+[markup.highlight]
+      codeFences = false
+      guessSyntax = true
+      hl_Lines = true
+      lineNoStart = 100
+      lineNos = true
+      lineNumbersInTable = false
+      tabWidth = 4
+      style = "monokailight"

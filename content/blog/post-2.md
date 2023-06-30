@@ -1,7 +1,7 @@
 ---
 title: "What you need to know about Programming"
 description: "meta description"
-image: "images/post/post-2.png"
+# image: "images/post/post-2.png"
 date: 2021-01-24T18:19:25+06:00
 categories: ["artificial intelligence"]
 tags: ["tech", "ai"]
