@@ -6,6 +6,7 @@ tags = ["code"]
 categories = ["code"]
 date = 2022-08-04T00:46:44.431Z
 draft = false
+type = "featured"
 +++
   
 This is a growing list hence, the article has been broken down into multiple parts

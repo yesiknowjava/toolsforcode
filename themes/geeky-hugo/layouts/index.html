@@ -119,7 +119,7 @@
             </li>
             {{ else }}
             <li class="page-item prev d-flex align-items-center disabled">
-              <span class="page-link disabled" aria-label="Pagination Arrow"><i
+              <span class="page-link disabled" aria-label="Pagination Arrow" role="button"><i
                   class="fas fa-arrow-left me-3"></i><span class="d-none d-sm-inline">{{ site.Params.previous_button }}</span>
               </span>
             </li>
@@ -165,13 +165,13 @@
             <!-- Next page. -->
             {{ if $paginator.HasNext }}
             <li class="page-item next d-flex align-items-center">
-              <a class="page-link arrow" href="{{ $paginator.Next.URL }}" aria-label="Pagination"><span class="d-none d-sm-inline">{{ site.Params.next_button }}</span><i
+              <a class="page-link arrow" href="{{ $paginator.Next.URL }}" aria-label="Pagination" role="button"><span class="d-none d-sm-inline">{{ site.Params.next_button }}</span><i
                   class="fas fa-arrow-right ms-3"></i>
               </a>
             </li>
             {{ else }}
             <li class="page-item next d-flex align-items-center disabled">
-              <span class="page-link arrow" aria-label="Pagination"><span class="d-none d-sm-inline">{{ site.Params.next_button }}</span><i class="fas fa-arrow-right ms-3"></i>
+              <span class="page-link arrow" aria-label="Pagination" role="button"><span class="d-none d-sm-inline">{{ site.Params.next_button }}</span><i class="fas fa-arrow-right ms-3"></i>
               </span>
             </li>
             {{ end }}

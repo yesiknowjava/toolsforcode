@@ -14,12 +14,12 @@
             <ul class="list-unstyled search me-3">
               {{ if site.Params.search }}
               <li class="list-inline-item">
-                <a href="#" class="toggle-search" data-target="#search-wrap"><i class="fas fa-search"></i></a>
+                <a href="#" class="toggle-search" data-target="#search-wrap" aria-label="search"><i class="fas fa-search"></i></a>
               </li>
               {{ end }}
               <li class="list-inline-item">
                 <a href="#" class="toggle-side-nav" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
-                  aria-controls="offcanvasRight"><i class="fas fa-bars"></i></a>
+                  aria-controls="offcanvasRight" aria-label="toggle navigation menu"><i class="fas fa-bars"></i></a>
               </li>
             </ul>
           </div>
@@ -67,7 +67,7 @@
             <ul class="list-unstyled social-icons">
               {{ range site.Params.social }}
               <li class="list-inline-item">
-                <a href="{{ .link | safeURL }}"><i class="{{.icon}}"></i></a>
+                <a href="{{ .link | safeURL }}" aria-label="{{ .alt }}"><i class="{{.icon}}"></i></a>
               </li>
               {{ end }}
             </ul>
@@ -75,7 +75,7 @@
             {{ if site.Params.search }}
             <ul class="list-unstyled search d-none d-lg-block">
               <li class="list-inline-item">
-                <button class="toggle-search" data-target="#search-wrap"><i class="fas fa-search"></i></button>
+                <button class="toggle-search" data-target="#search-wrap" aria-label="search"><i class="fas fa-search"></i></button>
               </li>
             </ul>
             {{ end }}
@@ -87,7 +87,7 @@
         <div class="search-wrap" id="search-wrap">
           <form action="{{ `search`| relLangURL }}" class="search-bar d-flex align-items-center justify-content-center">
             <input class="search-input w-100 border-0 h-100" id="search-query" name="s" type="search" placeholder="Search..." />
-            <span class="close-search toggle-search" data-target="#search-wrap">
+            <span class="close-search toggle-search" data-target="#search-wrap" aria-label="search">
               <i class="fas fa-times"></i>
             </span>
           </form>
@@ -125,7 +125,7 @@
             <ul class="list-unstyled social-icons">
               {{ range site.Params.social }}
               <li class="list-inline-item">
-                <a href="{{ .link | safeURL }}"><i class="{{.icon}}"></i></a>
+                <a href="{{ .link | safeURL }}" aria-label="{{ .alt }}"><i class="{{.icon}}"></i></a>
               </li>
               {{ end }}
             </ul>

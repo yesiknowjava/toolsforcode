@@ -4,7 +4,6 @@ date: 2018-11-21T00:09:02+05:30
 draft: false
 categories: 
     - code
-    - laptops
 tags: ["Static Site Generators"]
 featuredImage: "img/code/hugo-tutorial-for-beginners.jpg"
 Description: "This tutorial explores the basics of installing hugo on windows and ubuntu. It also shows how to create and run a simple site in hugo along with installing a custom theme"

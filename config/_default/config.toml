@@ -1,6 +1,6 @@
 ######################## default configuration ####################
 baseURL = "https://toolsforcode.com/"
-title = "Geeky | Hugo Personal Blog Template"
+title = "Tools For Code | Learn to code"
 theme = "geeky-hugo"
 languageName = "En"
 languageCode = "en-us"

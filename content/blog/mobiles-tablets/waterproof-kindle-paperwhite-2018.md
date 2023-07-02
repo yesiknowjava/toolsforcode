@@ -6,6 +6,7 @@ categories: ["mobiles-tablets"]
 tags: ["e-ink"]
 featuredImage: "img/mobiles-tablets/waterproof-kindle-paperwhite-2018.jpg"
 Description: "Kindle paperwhite 2018 is launched. Why should one buy this if you are an avid book reader"
+
 ---
 
 {{< figure src="/img/mobiles-tablets/waterproof-kindle-paperwhite-2018-additional.jpg"  >}}

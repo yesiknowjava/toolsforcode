@@ -17,7 +17,7 @@ We have compiled a list of regular expression cheatbook to help in learning regu
     
     Example : This is the start
     Answer : 
-    {{< highlight bash "linenos=inline" >}}
+    {{< highlight python >}}
         /^\w+/
     {{< / highlight >}}
 

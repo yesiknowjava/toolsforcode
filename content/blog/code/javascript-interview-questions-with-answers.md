@@ -7,26 +7,28 @@ tags = ["code"]
 categories = ["code"]
 date = 2022-08-02T09:46:44.431Z
 draft = false
+type = "featured"
 +++
   
 <p></p>
 <p></p>
 
-#### What are the advantages of using JSON rather than using xml
+###### What are the advantages of using JSON rather than using xml
 
 JSON is a lightweight format for storing and transferring data. When compared to xml, json files are of lesser size for the same amount of data as it doesnt need the extra tags as required by xml. Also, json is widely used in various languages.
 <p></p>
 
-#### Difference between Javascript Object and JSON format
+###### Difference between Javascript Object and JSON format
 There are 3 fundamental differences between Javascript Object and JSON format. They are
 
-1. 1. Keys should be enclosed in double quotes in JSON, but its not mandatory in javascript objects.
-2. 2. Javascript objects can have functions as value, whereas JSON may not contain functions.
-3. 3. The last value in a javascript object can have a trailing comma ',', but in JSON its not the case (this is a structural difference only)
+1. Keys should be enclosed in double quotes in JSON, but its not mandatory in javascript objects.
+2. Javascript objects can have functions as value, whereas JSON may not contain functions.
+3. The last value in a javascript object can have a trailing comma ',', but in JSON its not the case (this is a structural difference only)
 
 <p></p>
 
-#### Difference between var and let
+###### Difference between var and let
+
 ```var``` can be redeclared within {}, but ```let``` cannot be redeclared. 
 
 {{< highlight javascript "hl_lines=2" >}}

@@ -7404,20 +7404,20 @@ h1,
     padding: .6em 1.5em; }
 
 .btn-primary {
-  background: #2ba283;
+  background: #02694e;
   color: #FFF;
-  border-color: #2ba283; }
+  border-color: #02694e; }
   .btn-primary:hover, .btn-primary:active, .btn-primary.active, .btn-primary:focus, .btn-primary.focus {
-    background: #2ba283 !important;
-    border-color: #2ba283 !important; }
+    background: #02694e !important;
+    border-color: #02694e !important; }
 
 .btn-outline-primary {
   background: transparent;
-  color: #2ba283;
-  border-color: #2ba283; }
+  color: #02694e;
+  border-color: #02694e; }
   .btn-outline-primary:hover, .btn-outline-primary:active, .btn-outline-primary.active, .btn-outline-primary:focus, .btn-outline-primary.focus {
-    background: #2ba283 !important;
-    border-color: #2ba283 !important; }
+    background: #02694e !important;
+    border-color: #02694e !important; }
 
 /**! ----- Button Hover ---- **/
 .btn:after,
@@ -7445,7 +7445,7 @@ body {
   overflow-x: hidden; }
 
 ::selection {
-  background: #36caa3;
+  background: #039b73;
   color: #FFF; }
 
 /*------------------------------------------------------------------
@@ -7468,7 +7468,7 @@ a:focus {
   text-decoration: none; }
 
 a:hover {
-  color: #2ba283; }
+  color: #02694e; }
 
 a,
 button,
@@ -7512,7 +7512,7 @@ select {
 .title-border {
   text-decoration-line: underline;
   text-decoration-style: wavy;
-  text-decoration-color: #2ba283;
+  text-decoration-color: #02694e;
   text-decoration-thickness: 2px;
   text-underline-offset: 10px; }
 
@@ -7529,17 +7529,17 @@ select {
     height: 100%;
     z-index: -1; }
   .social-icons li:first-child::before {
-    border-left: 1px solid #2ba283;
+    border-left: 1px solid #02694e;
     right: 30px; }
   .social-icons li:last-child::before {
-    border-right: 1px solid #2ba283;
+    border-right: 1px solid #02694e;
     left: 30px; }
   .social-icons li a {
     color: #000;
     font-size: 15px;
     padding: 4px 8px; }
     .social-icons li a:hover {
-      color: #2ba283; }
+      color: #02694e; }
 
 /* pagination */
 .pagination .prev a,
@@ -7567,7 +7567,7 @@ select {
   background: transparent;
   padding: 10px 15px; }
   .pagination .page-link.active, .pagination .page-link:hover {
-    background-color: #2ba283;
+    background-color: #02694e;
     color: #FFF; }
 
 /* widget */
@@ -7603,7 +7603,7 @@ select {
     font-family: "Merriweather Sans", sans-serif; }
     .form-group label small, .form-group label .small {
       margin-left: 0.2em;
-      color: #2ba283; }
+      color: #02694e; }
   .form-group .form-control {
     border: 0;
     border-radius: 0;
@@ -7615,11 +7615,11 @@ select {
     padding: 0;
     height: 3em; }
     .form-group .form-control::placeholder {
-      color: #999 !important;
+      color: #2c2c2c !important;
       font-size: 0.8rem; }
     .form-group .form-control:focus {
       box-shadow: none;
-      border-color: #2ba283; }
+      border-color: #02694e; }
   .form-group textarea {
     height: 150px !important; }
 
@@ -7638,16 +7638,16 @@ select {
   outline: 0 !important; }
 
 .text-primary {
-  color: #2ba283 !important; }
+  color: #02694e !important; }
 
 .text-secondary {
-  color: #2ba283 !important; }
+  color: #02694e !important; }
 
 .text-black {
   color: #000 !important; }
 
 .text-light {
-  color: #999 !important; }
+  color: #2c2c2c !important; }
 
 .text-dark {
   color: #222 !important; }
@@ -7656,7 +7656,7 @@ select {
   color: #555 !important; }
 
 .bg-primary {
-  background: #2ba283 !important; }
+  background: #02694e !important; }
 
 .bg-light {
   background: #f2f2f2 !important; }
@@ -7666,7 +7666,7 @@ select {
   border-radius: 35px; }
 
 .badge-primary {
-  background-color: #2ba283 !important;
+  background-color: #02694e !important;
   color: #FFF !important; }
 
 .font-primary {
@@ -7703,7 +7703,7 @@ select {
   .content .h6 {
     margin-top: 3rem; }
   .content a {
-    color: #2ba283;
+    color: #02694e;
     text-decoration: underline; }
   .content ol,
   .content ul {
@@ -7724,7 +7724,7 @@ select {
         height: 0.5rem;
         width: 0.5rem;
         border-radius: 50%;
-        background: #2ba283;
+        background: #02694e;
         left: 3px;
         top: 0.5rem; }
   .content img {
@@ -7758,7 +7758,7 @@ select {
         border: 0;
         position: absolute;
         font-size: 35px;
-        color: #2ba283; }
+        color: #02694e; }
       .content blockquote p::before {
         content: "\f10d";
         top: 0;
@@ -7812,7 +7812,7 @@ select {
           margin-right: 0 !important;
           margin-left: 0 !important; } }
     .header .navbar-nav .nav-item.active .nav-link {
-      background: #2ba283;
+      background: #02694e;
       border-radius: 50px;
       color: #FFF; }
   .header .navbar-nav .nav-link {
@@ -7829,7 +7829,7 @@ select {
       .header .navbar-nav .nav-link {
         padding: 0.6em 1em; } }
     .header .navbar-nav .nav-link:hover {
-      background: #2ba283;
+      background: #02694e;
       border-radius: 50px;
       color: #FFF; }
   .header .navbar-toggler:focus {
@@ -7869,12 +7869,12 @@ select {
       transition: 0.3s;
       font-family: "Merriweather Sans", sans-serif; }
       .header .dropdown-menu .dropdown-item.active, .header .dropdown-menu .dropdown-item:active, .header .dropdown-menu .dropdown-item:hover {
-        color: #2ba283;
-        background-color: rgba(43, 162, 131, 0.15); }
+        color: #02694e;
+        background-color: rgba(2, 105, 78, 0.15); }
 
 /* search */
 .search li a {
-  background: #2ba283;
+  background: #02694e;
   border-radius: 50%;
   color: #FFF;
   font-size: 14px;
@@ -7934,7 +7934,7 @@ select {
         font-size: 26px;
         padding: 20px; }
         .offcanvas .offcanvas-menu li a:hover {
-          color: #2ba283; }
+          color: #02694e; }
   .offcanvas .btn-close {
     border: 0;
     background: transparent;
@@ -7948,7 +7948,7 @@ select {
     z-index: 7676; }
 
 .toggle-search {
-  background-color: #2ba283;
+  background-color: #02694e;
   color: #FFF;
   border: 0;
   border-radius: 50%;
@@ -7961,7 +7961,7 @@ select {
   background-size: contain;
   padding-top: 40px; }
   .banner h1 strong, .banner .h1 strong {
-    color: #2ba283; }
+    color: #02694e; }
 
 .list-styled li {
   list-style-type: none;
@@ -7978,12 +7978,12 @@ select {
     border-radius: 50%;
     left: 0;
     top: 11px;
-    background: #2ba283;
+    background: #02694e;
     width: 9px;
     height: 9px;
     left: 3px;
     border: 2px solid #FFF;
-    box-shadow: 0 0 0 2px #2ba283; }
+    box-shadow: 0 0 0 2px #02694e; }
 
 .drop-cap > p:first-child:first-letter {
   font-size: 3rem;
@@ -8014,7 +8014,7 @@ select {
   .card-meta li a {
     color: #555; }
     .card-meta li a:hover {
-      color: #2ba283; }
+      color: #02694e; }
   .card-meta li span {
     padding-left: 2px;
     display: block; }
@@ -8025,7 +8025,7 @@ select {
   position: absolute; }
 
 .nav-pills .btn.active {
-  background-color: #2ba283;
+  background-color: #02694e;
   color: #FFF; }
 
 .scroll-list {
@@ -8062,7 +8062,7 @@ select {
     border: 0;
     left: 0;
     position: absolute;
-    color: #2ba283; }
+    color: #02694e; }
   .category-widget ul li:not(:last-child) {
     border-bottom: 1px solid #E1E1E1;
     padding-bottom: 12px;
@@ -8071,9 +8071,9 @@ select {
     color: #222;
     margin-left: 18px; }
     .category-widget ul li a:hover {
-      color: #2ba283; }
+      color: #02694e; }
     .category-widget ul li a small, .category-widget ul li a .small {
-      color: #999; }
+      color: #2c2c2c; }
 
 .featured-widget-img {
   width: 75px;
@@ -8159,8 +8159,8 @@ select {
     font-weight: 700;
     padding: 5px; }
     .footer .footer-menu li a:hover {
-      color: #2ba283; }
+      color: #02694e; }
   .footer .social-icons {
     margin-bottom: 55px; }
   .footer .copyright a {
-    color: #2ba283; }
+    color: #02694e; }
