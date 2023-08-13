@@ -9,15 +9,17 @@ draft = false
 type = "featured"
 +++
 
-This is a growing list hence, the article has been broken down into multiple parts
+This is a growing list hence, the article has been broken down into multiple parts.
 
-<div class="category-widget" style="border: 1px solid #CCC; padding: 10px 0 0 10px">
-        <ul>
-                <li>[1. Python Interview questions part 1](../python-interview-questions-with-answers/)</li>
-                <li>[2. Python Interview questions part 2](../python-interview-questions-with-answers-part2/)</li>
-        </ul>
-</div>
-<p></p>
+
+<br>
+
+
+1. [Python Interview questions part 1](../python-interview-questions-with-answers/)
+2. [Python Interview questions part 2](../python-interview-questions-with-answers-part2/)
+        
+
+{{< card path="about" padding="3" class="w-50" color="body-tertiary" header="publication" footer="none" >}}
 
 #### How to find the occurances of a particular substring in a sentance?
   
