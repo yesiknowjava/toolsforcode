@@ -2,7 +2,7 @@
 title: "Markdown tips and tricks"
 date: 2024-03-09T19:43:28+05:30
 draft: false
-image: "images/post/post-2.png"
+# image: "images/post/post-2.png"
 categories: ["code"]
 tags: ["markdown"]
 ---
