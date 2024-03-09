@@ -1,6 +1,6 @@
 +++
-type="courses"
-layout="courses"
+type="sub_course"
+layout="sub_course"
 title = "Queues"
 sub="true"
 description = "List of courses on python, django, jquery, react, angular, graphql, hugo"

@@ -1,6 +1,6 @@
 +++
-type="courses"
-layout="courses"
+type="sub_course"
+layout="sub_course"
 sub="true"
 title = "2. Hugo Intermediate"
 description = "List of courses on python, django, jquery, react, angular, graphql, hugo"

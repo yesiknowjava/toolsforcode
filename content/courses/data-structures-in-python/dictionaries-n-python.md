@@ -1,6 +1,6 @@
 +++
-type="courses"
-layout="courses"
+type="sub_course"
+layout="sub_course"
 title = "Dictionaries"
 sub="true"
 description = "What is a dictionary. Dictionary implementation in python and its use cases."

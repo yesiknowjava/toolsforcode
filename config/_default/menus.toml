@@ -7,19 +7,19 @@ url = ""
 weight = 1
 
 [[main]]
-name = "About"
-url = "about/"
+name = "Courses"
+url = "courses/"
 weight = 2
 
 [[main]]
-name = "Contact"
-url = "contact/"
+name = "Tools"
+url = "tools/"
 weight = 3
 
 [[main]]
 name = "Pages"
 url = "#"
-weight = 3
+weight = 4
 hasChildren = true
 
   [[main]]

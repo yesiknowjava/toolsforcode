@@ -1,6 +1,6 @@
 +++
-type="courses"
-layout="courses"
+type="sub_course"
+layout="sub_course"
 title = "Linked Lists"
 sub="true"
 description = "List is a sequence of objects like strings, numbers or other lists. This chapter explains how a list is used"

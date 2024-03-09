@@ -5,6 +5,7 @@
     <div class="row">
       <div class="col-md-8 mx-auto text-center">
         <h1 class="h2 mb-0">{{ .Title }}</h1>
+        
       </div>
     </div>
   </div>
@@ -14,10 +15,9 @@
   <div class="container">
     <div class="row g-3 justify-content-center text-center">
 
-      {{ $courses := (where .Site.Pages "Section" "courses") }}
-      {{ range $courses }}
+      
 
-      {{ if .Sections }}
+     
       {{ partial "breadcrumbs.html" . }}
 
 
@@ -38,9 +38,7 @@
         {{ end }}
       </div>
 
-      {{ end }}
 
-      {{ end }}
 
 
     </div>

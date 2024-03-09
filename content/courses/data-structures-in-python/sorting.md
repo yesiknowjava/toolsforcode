@@ -1,6 +1,6 @@
 +++
-type="courses"
-layout="courses"
+type="sub_course"
+layout="sub_course"
 title = "Sorting algorithms"
 sub="true"
 description = "Sorting algorithms"
