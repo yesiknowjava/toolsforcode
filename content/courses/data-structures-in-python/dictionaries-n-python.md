@@ -13,6 +13,9 @@ draft = false
 weight = 2
 +++
 
+
+## What is a dictionary {.className class="h5"}
+
 A dictionary is a hash map contaning key value pairs. In python dictionaries are represented like this
 
 {{< highlight python >}}
@@ -21,6 +24,8 @@ dt = {
     'oranges': 5
 }
 {{< / highlight >}}
+
+## Advantages of a dictionary  {.className class="h5"}
   
 One thing to note here is that, dictionaries are great for searching as the order of complexity is always ```Big O(1)```.
   
@@ -36,11 +41,16 @@ dt = {
   
 This is great. Now lets try and solve some problems using dictionaries.
 
+
+### Problem  {.className class="h6"}
+
 Given a list of values ```data = [[1, 5, [2, 3]], [2, 3, [4]], [3, 3, []], [4, 2, []]]``` with each item in the list representing empid, his value and finally his subordinate list, can we try to find the total value of an employee along with the value of his subordinates if he has one.
 
 Suppose we want the net asset value (nav) of emp id 1, that would be 5 + 3 + 3 + 2 = 13. Note that the value of empid 4 is also included, even though he is not directly related to emp id 1.
 
-Solution : The best way to solve this problem is to first convert the list into a dict.
+### Solution  {.className class="h6"}
+
+The best way to solve this problem is to first convert the list into a dict.
 
 {{< highlight python >}}
 def form_dict(data):
@@ -67,15 +77,18 @@ def calculate_worth(data_dict, id, worth_list=[]):
     return worth_list
 {{< / highlight >}}
 
-The function calvulate_worth takes 3 arguments, 
 
-1. 1. the dictionary containing the employee details
-2. 2. the employee id for which we need the value of
-3. 3. worth_list, a list containing the value of each employee and his subordinates.
+
+&NewLine;            
+The function ```calculate_worth``` takes 3 arguments, 
+
+1. the dictionary containing the employee details
+2. the employee id for which we need the value of
+3. worth_list, a list containing the value of each employee and his subordinates.
 
   
-  
-worth_list is the final output. It is initially sent as an empty list.
+&NewLine;   
+```worth_list``` is the final output. It is initially sent as an empty list.
 
 
 The method tries to append the net asset value of the employee to worth_list first and if the employee has subordinates, it then calls itself recursively with the id of each of the subordinates if the employee has one. If the employee has no subordinates, it just adds the value of the employee to the worth_list list and quits.

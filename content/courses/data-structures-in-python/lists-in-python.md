@@ -12,6 +12,8 @@ date = 2022-08-18T09:46:44.431Z
 draft = false
 weight = 1
 +++
+
+## What is a list
 A list is a sequence of objects that can hold strings, numbers, objects and other lists too.
 
 A list is represented using the ```[]``` brackets.

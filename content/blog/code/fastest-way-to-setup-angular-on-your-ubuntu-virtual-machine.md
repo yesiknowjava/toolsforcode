@@ -14,68 +14,71 @@ If you haven’t yet installed your Ubuntu VM, here is the article to first do t
 
 I am not going to make this article verbose as I feel developers are restless when it comes to learning technology. So here it is .. the fastest way to install angular js on ubuntu
 
-update your repositories
+## Update your repositories {.className class="h5"}
 
-    sudo apt-get update
+Assuming you have a ubuntu based linux distribution.
+
+```sudo apt-get update```
 
 Install node
 
-    sudo apt-get install nodejs
+```sudo apt-get install nodejs```
 
 Now run this on the terminal.
 
-    npm -v
+```npm -v```
 
 If it doesn’t work, then do this
 
-    sudo apt-get install npm
+```sudo apt-get install npm```
 
 Check your node version by doing this
 
-    node -v
+```node -v```
 
 Remember to install the latest version of node always and not the LTS version
 
-Yaay, Node is installed
+**Yaay, Node is installed**
 
  
 
-Install Nave
+### Install Nave {.className class="h5"}
 Nave is used to change between Node versions like so
 
-    nave use 7.9.0
+```nave use 7.9.0```
 
 To do that we need to install
 
-    npm install -g nave
+```npm install -g nave```
  
 
-Install Yarn Package Manager
+### Install Yarn Package Manager {.className class="h5"}
 Why use Yarn (a package manager from Facebook) when you can use npm (Node package manager). There are couple of advantages, you will not have dependency install issues with packages. Also, subsequent install of the same package in a different project will be faster as yarn will install it from the local repository instead of getting the same from the internet.
 
-    npm install -g yarn
+```npm install -g yarn```
  
 
-Install Angular using Yarn
-    yarn global add @angular/cli
+### Install Angular using Yarn {.className class="h5"}
+```yarn global add @angular/cli```
 
 If you get errors from the same, do this with npm for one last time,
 
-    npm install -g @angular/cli
+```npm install -g @angular/cli```
  
 
-Switching between package managers
+### Switching between package managers {.className class="h5"}
 
 Use yarn as packageManager
 
-    ng config -g cli.packageManager yarn
+```ng config -g cli.packageManager yarn```
 
 Use npm as packageManager
 
-    ng config -g cli.packageManager npm
+```ng config -g cli.packageManager npm```
  
 
-Create an angular app
-    sudo ng new awesomeangular
-    cd awesomeangular
+### Lets Create an angular app {.className class="h5"}
+```sudo ng new awesomeangular```
+
+```cd awesomeangular```
  

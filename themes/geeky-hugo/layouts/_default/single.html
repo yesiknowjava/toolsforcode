@@ -37,6 +37,9 @@
             <span>{{ time.Format ":date_long" .PublishDate }}</span>
           </li>
         </ul>
+
+        <div class="content drop-cap">{{ partial "toc.html" . }}</div>
+
         <div class="content drop-cap">{{.Content}}</div>
         <!-- disqus comments -->
         {{ if .Site.DisqusShortname }}

@@ -1,29 +1,28 @@
 +++
 type="sub_course"
 layout="sub_course"
-title = "Sorting Algorithms"
-sub="true"
-description = "Sorting Algorithms"
+title = "Create a basic Django application with SqlLite"
+description = "Create a basic Django application with SqlLite"
 image = "/img/python-interview-questions.jpg"
 featuredImage = "/img/python-interview-questions.jpg"
 tags = []
 categories = []
-date = 2022-08-04T01:46:44.431Z
+date = 2022-08-18T09:46:44.431Z
 draft = false
-weight = 8
+main = true
+url = "/courses/django/1"
 +++
+Basic Sorting algorithms 
 
-<!-- Basic Sorting algorithms 
-
-1. Bubble Sort
-2. Selection Sort
-3. Merge Sort
-4. Insertion Sort -->
+1. __1. Bubble Sort__
+2. __2. Selection Sort__
+3. __3. Merge Sort__
+4. __4. Insertion Sort__
 
 <p></p>
 Ofcourse there are a lot many, but these are the absolute basics anyone has to know.
 
-## Merge Sort {.className class="h5"}
+__3. Merge Sort__
 {{< highlight python >}}
 def sort(array):
     if len(array) <= 1:
